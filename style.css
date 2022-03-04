@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    font-family: 'Varela Round', sans-serif;
+}
+body{
+    background-color: #464646;
+    background-image: url("iconos/fondo2.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* CONTENEDOR AÑADIR TAREA */
+.añadirTareaForm{
+    background-color: rgba(250, 235, 215, 0.9);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;        
+    justify-content: center;
+}
+#descripcionTarea{
+    resize: none;
+}
+#btnAñadirTarea{
+    border-radius: 7px;
+    margin-top: 15px;
+}
+h2{
+    margin-left: 15px;
+    margin-bottom: 2px;
+    color: white;
+    text-shadow: 3px 3px black;
+    font-size: 30px;
+}
+
+/* CONTENEDOR LISTA DE TAREAS */
+.listas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h3{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-right: 30px;
+}
+.lista{
+    height: fit-content;
+    width: 280px;
+}
+.tarea ul{
+    list-style: none;
+    padding: 10px;
+}
+.imagenes{
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+.imagenes > button{
+    border-radius: 0px 20px 20px 0px;
+    width: max-content;
+    height: max-content;
+    margin-top: 5px;
+}
+.botonesLista{
+    display: flex;
+    justify-content: right;
+}
+.tituloTarea{
+    font-size: 20px;
+    font-weight: bold;
+}
+.textoTarea, .estadoTarea{
+    font-size: 15px;
+    margin: 2px;
+    margin-left: 10px;
+}
+.contenedorTareas{
+    background-color: cadetblue;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: max-content;
+    border-radius: 10px;
+    width: 90%;
+    height: fit-content;
+}
+.itemTarea{
+    background-color: gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.botonMostrar{
+    padding: 0px;
+    border-radius: 10px;
+    background-color: white;
+}
+.botonMostrar > img{
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    float: left;
+}
+.eliminarTarea{
+    padding: 0px;
+    float: right;
+    margin-right: 5px;
+    border-radius: 15px;
+    border: 0px;
+    width: 15px;
+    height: 15px;
+}

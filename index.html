@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TODO List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Añadir Tarea</h2>
+        <div class="añadirTareaForm">
+            <form action="/action_page.php" class="formulario">
+                <label for="nombreTarea">Nombre:</label><br>
+                <input type="text" id="nombreTarea"><br>
+                <label for="descripciónTarea">Descripción:</label><br>
+                <textarea id="descripcionTarea" name="textarea" rows="6" cols="40"></textarea><br>
+                <label for="estado">Estado:</label><br>
+                <select name="estado" id="estadoTarea">
+                    <option value="todo">ToDo</option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
+                    <option value="deleted">Deleted</option>
+                </select><br>
+                <label for="prioridad">Prioridad:</label><br>
+                <input type="number" id="prioridadTarea" name="prioridad" min="0" max="10"><br>
+                <button id="btnAñadirTarea">Añadir Tarea</button>
+            </form> 
+        </div>
+
+        <h2>Listas  <button id="mostrarCreadas" class="botonMostrar"><img src="iconos/creadas.png" alt="Mostrar Creadas"></button> <button id="mostrarEliminadas" class="botonMostrar"><img src="iconos/deleted.png" alt="Mostrar Eliminadas"></button></h2>
+        <div class="listas">
+            <div class="lista" id="listaGeneralContenedor">
+                <h3>Creadas</h3>
+                <div class="botonesLista">
+                    <div class="contenedorTareas">
+                        <div class="tarea">
+                            <ul id="listaGeneral">
+                                <li id="tareaGeneral" class="itemTarea" draggable="true">
+                                    <!-- <button class="eliminarTarea"><img src="iconos/borrarTarea.png" alt="Eliminar Tarea"></button> -->
+                                    <input type="image" src="iconos/borrarTarea.png" class="eliminarTarea" />
+                                    <span id="nombreTarea" class="tituloTarea">Por defecto [1]</span>
+                                    <p id="descripcionTarea" class="textoTarea">Por defecto</p>
+                                    <p id="prioridad" class="estadoTarea">Por defecto</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <!-- <input type="image" src="iconos/oculto.png" id="ocultarGeneral" /> -->
+                        <button><img src="iconos/oculto.png" alt="ocultar" id="ocultarGeneral"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="lista">
+                <h3>To Do</h3>
+                <div class="botonesLista">
+                    <div class="contenedorTareas">
+                        <div class="tarea">
+                            <ul id="listaToDo">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <button class="ocultar"><img src="iconos/flecha-arriba.png" alt="Prioridad ascendente" id="ordenarAscendenteToDo"></button>
+                        <button class="ocultar"><img src="iconos/flecha-abajo.png" alt="Prioridad descendente" id="ordenarDescendenteToDo"></button>
+                        <button><img src="iconos/eliminar.png" alt="Vaciar lista" id="vaciarToDo"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="lista">
+                <h3>Doing</h3>
+                <div class="botonesLista">
+                    <div class="contenedorTareas">
+                        <div class="tarea">
+                            <ul id="listaDoing">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <button class="ocultar"><img src="iconos/flecha-arriba.png" alt="Prioridad ascendente" id="ordenarAscendenteDoing"></button>
+                        <button class="ocultar"><img src="iconos/flecha-abajo.png" alt="Prioridad descendente" id="ordenarDescendenteDoing"></button>
+                        <button><img src="iconos/eliminar.png" alt="Vaciar lista" id="vaciarDoing"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="lista">
+                <h3>Done</h3>
+                <div class="botonesLista">
+                    <div class="contenedorTareas">
+                        <div class="tarea">
+                            <ul id="listaDone">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <!-- <button><img src="iconos/anadir.png" alt="añadir"></button> -->
+                        <button class="ocultar"><img src="iconos/flecha-arriba.png" alt="Prioridad ascendente" id="ordenarAscendenteDone"></button>
+                        <button class="ocultar"><img src="iconos/flecha-abajo.png" alt="Prioridad descendente" id="ordenarDescendenteDone"></button>
+                        <button><img src="iconos/eliminar.png" alt="Vaciar lista"  id="vaciarDone"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="lista" id="listaDeletedContenedor">
+                <h3>Deleted</h3>
+                <div class="botonesLista">
+                    <div class="contenedorTareas">
+                        <div class="tarea">
+                            <ul id="listaDeleted">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imagenes">
+                        <button><img src="iconos/oculto.png" alt="añadir" id="ocultarDeleted"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="Variables.js"></script>
+        <script src="Task.js"></script>
+        <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>

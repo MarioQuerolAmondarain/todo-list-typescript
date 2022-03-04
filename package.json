@@ -1,0 +1,22 @@
+{
+  "name": "todo-list-typescript",
+  "version": "1.0.0",
+  "description": "Traspaso del proyecto del Todo List a Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioQuerolAmondarain/todo-list-typescript.git"
+  },
+  "keywords": [
+    "todo-list-typescript"
+  ],
+  "author": "marioquerolamondarain@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioQuerolAmondarain/todo-list-typescript/issues"
+  },
+  "homepage": "https://github.com/MarioQuerolAmondarain/todo-list-typescript#readme"
+}
